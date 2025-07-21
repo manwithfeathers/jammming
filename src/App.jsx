@@ -28,8 +28,8 @@ function App() {
         
         <p>Adam's Song App</p>
         <SearchBar />
-        <SearchResults songs={songList}/>
-        <Playlist playlist={songList}/>
+        <SearchResults songs={songList} addSong={addSong}/>
+        <Playlist playlist={playlist}/>
       
        
 
