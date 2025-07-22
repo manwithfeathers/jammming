@@ -8,6 +8,21 @@ const songList = [
         artist: "SDF",
         name: "People Person",
 
+},
+{
+        artist: "SDF",
+        name: "Application",
+
+},
+{
+        artist: "dane law",
+        name: "Perth Anon",
+
+},
+{
+        artist: "dane law",
+        name: "Clementina",
+
 }
 
 ];
