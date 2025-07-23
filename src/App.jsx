@@ -6,6 +6,7 @@ import SearchBar from './SearchBar'
 import SearchResults from "./SearchResults"
 import songList from "./SongList"
 import Playlist from "./Playlist"
+import styles from "./styling.module.css"
 
 
 
@@ -65,18 +66,21 @@ function App() {
   }
   
 
-
-
   return (
     <>
-      <div>
-        <h1>Similar Artist Finder</h1>
-        <SearchBar findSimilar={findSimilar} onChange={handleSearch} search={search} />
-        <SearchResults artists={similarArtists} addArtist={addArtist} />
-        <h1>Playlist</h1>
-        <input type="text" value={playlistName} onChange={handleUserInput}></input>
-        <Playlist playlist={playlist} removeItem={removeItem}/>
-        <button onClick={handleSubmit}>Save</button>
+      <h1>Similar Artist Finder</h1>
+      <div className={styles.container}>
+        <div>
+          <h2>Search</h2>
+          <SearchBar findSimilar={findSimilar} onChange={handleSearch} search={search} />
+          <SearchResults artists={similarArtists} addArtist={addArtist} />
+        </div>
+        <div>
+          <h2>Playlist</h2>
+          <input type="text" value={playlistName} onChange={handleUserInput}></input>
+          <Playlist playlist={playlist} removeItem={removeItem}/>
+          <button onClick={handleSubmit}>Save</button>
+        </div>
       </div>
     </>
   )
